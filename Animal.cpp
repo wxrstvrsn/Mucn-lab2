@@ -18,7 +18,7 @@ std::ostream &operator<<(std::ostream &os, const Animal &animal) {
 
 
 
-//FIXME
+//FIXME -- ask A.A
 //const std::string Dog::type = "Dog";
 
 
@@ -43,7 +43,7 @@ Animal *Dog::clone() const {
 //    return species;
 //}
 
-//FIXME
+//FIXME -- ask A.A
 //const std::string Cat::species = "Cat";
 
 Cat::Cat(const std::string &name, int age, const std::string &breed)
@@ -62,7 +62,7 @@ Animal *Cat::clone() const {
 }
 
 
-//FIXME
+//FIXME ask A.A
 //const std::string &Cat::getSpecies() const {
 //    static const std::string species = "Cat";
 //    return species;

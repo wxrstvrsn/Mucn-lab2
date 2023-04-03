@@ -10,7 +10,7 @@
 
 class Zoo {
 public:
-    Zoo() = default;
+    Zoo();
 
     Zoo(const std::string &_title) : title(_title) {};
 
@@ -29,7 +29,7 @@ public:
     /** C-tor **/
     Zoo(const Zoo &other);
 
-    /** Overload insertion operator for adding Animal to Zoo **/
+    /** Overload insertion operator for adding Animal to Zoo */
     Zoo &operator<<(const Animal &animal);
 
     /** Equal operator for Zoo stores **/
@@ -38,7 +38,7 @@ public:
     /** Sending to console name, size and buddies */
     friend std::ostream &operator<<(std::ostream &os, const Zoo &zoo);
 
-    /** Temporary void for db **/
+    /** Temporary void for db (until i create good realization of operator<< **/
     void display() {
         for (Animal *iter: animals) {
             std::cout << *iter << " ";

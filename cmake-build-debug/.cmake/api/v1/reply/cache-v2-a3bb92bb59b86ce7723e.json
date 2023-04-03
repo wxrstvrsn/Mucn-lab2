@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/2ndLab/cmake-build-debug"
+			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/lab2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/2ndLab"
+			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/lab2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1207,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/2ndLab/cmake-build-debug"
+			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/lab2/cmake-build-debug"
 		},
 		{
 			"name" : "secondLab_IS_TOP_LEVEL",
@@ -1231,7 +1231,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/2ndLab"
+			"value" : "/cygdrive/c/Users/79157/CLionProjects/MISP/2ndLAB/lab2"
 		}
 	],
 	"kind" : "cache",

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "secondLab.exe"
+			"path" : "lab2.exe"
 		},
 		{
-			"path" : "secondLab.pdb"
+			"path" : "lab2.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -58,7 +58,7 @@
 			]
 		}
 	],
-	"id" : "secondLab::@6890427a1f51a3e7e1df",
+	"id" : "lab2::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -74,8 +74,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "secondLab",
-	"nameOnDisk" : "secondLab.exe",
+	"name" : "lab2",
+	"nameOnDisk" : "lab2.exe",
 	"paths" : 
 	{
 		"build" : ".",

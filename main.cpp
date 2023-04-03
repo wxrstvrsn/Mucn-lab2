@@ -38,9 +38,9 @@ int main() {
     std::cout << "\n---------------------"
                  "\n---------------------"
                  "\n---------------------" << std::endl;
-    zoo1.display();
+    std::cout << zoo1 << std::endl;
     std::cout << "UPDATED\n" << std::endl;
-    zoo2.display();
+    zoo2.display(); //FIXME: replace with <<
 
     std::cout << "\n\n00000000000000000000000000000000\n\n";
     std::cout << zoo1 << std::endl;

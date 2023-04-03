@@ -18,6 +18,7 @@ public:
     /**C-tor with parameters */
     Animal(const std::string &name = "", int age = 0, const std::string &breed = "");
 
+    //TODO: RETHINK about manual adding information bout animals from input buffer
     /**C-tor for manual adding animals [maybe i will rewrite it later {No, still feel lazy and folly} */
     Animal();
 
@@ -28,7 +29,7 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Animal &animal);
 
     //FIXME
-    /** Comparision Operator */
+    /** Comparision Operator for correct work overload== in Zoo*/
     bool operator==(const Animal &other) const {
         return (name == other.name &&
                 age == other.age &&

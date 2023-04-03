@@ -73,6 +73,7 @@ bool Zoo::operator==(Zoo &other) {
 }
 
 std::ostream &operator<<(std::ostream &os, const Zoo &zoo) {
+    os << "Information about Zoo store:" << "\n";
     os << "Name: " << zoo.title << ", Size: "
        << zoo.animals.size() << "\n";
     os << "Contained Animals:" << "\n";
@@ -80,5 +81,9 @@ std::ostream &operator<<(std::ostream &os, const Zoo &zoo) {
         os << *iter << "\n";
     }
     return os;
+}
+
+Zoo::Zoo() {
+    title = "None";
 }
 

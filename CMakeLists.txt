@@ -3,5 +3,4 @@ project(secondLab)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(secondLab main.cpp Animal.cpp Animal.h Zoo.cpp Zoo.h)
-#add_executable(secondLab main.cpp)
+add_executable(lab2 main.cpp Animal.cpp Animal.h Zoo.cpp Zoo.h)
