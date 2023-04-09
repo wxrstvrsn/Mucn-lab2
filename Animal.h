@@ -9,11 +9,6 @@
 
 /** Base class **/
 class Animal {
-protected:
-    std::string name;
-    int age;
-    std::string breed;
-
 public:
     /**C-tor with parameters */
     Animal(const std::string &name = "", int age = 0, const std::string &breed = "");
@@ -34,17 +29,27 @@ public:
         return (name == other.name &&
                 age == other.age &&
                 breed == other.breed &&
-                species() == other.species());
+                getSpecies() == other.getSpecies());
     }
 
     //SHTC ??
-    virtual std::string species() const = 0;
+    /*virtual std::string getSpecies() const = 0;*/
 
+    //CHECKFIXED
+    static std::string getSpecies(){
+        return species;
+    }
 
     /** My name is Code, Shit Code  ??? */
     virtual Animal *clone() const = 0;
 
+protected:
+    std::string name;
+    int age;
+    std::string breed;
 
+    //CHECKFIXED
+    static std::string species;
 };
 
 /**Derived class **/
@@ -59,9 +64,9 @@ public:
 
     virtual Animal *clone() const override;
 
-    std::string species() const override {
+    /*std::string getSpecies() const override {
         return "Dog";
-    }
+    }*/
 };
 
 /**Derived class **/
@@ -75,8 +80,22 @@ public:
 
     virtual Animal *clone() const override;
 
-    std::string species() const override {
+    /*std::string getSpecies() const override {
         return "Cat";
-    }
+    }*/
 };
 
+class Rabbit : public Animal {
+public:
+    Rabbit(const std::string &name = "", int age = 0, const std::string &breed = "");
+
+    virtual void Say() const override;
+
+    virtual void Play() const override;
+
+    virtual Animal *clone() const override;
+
+    /*std::string getSpecies() const override {
+        return "Rabbit";
+    }*/
+};

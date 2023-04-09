@@ -15,41 +15,36 @@ Animal *Zoo::get() {
     return animal;
 }
 
-void Zoo::put(const Animal &animal) {
-    Animal *new_animal = animal.clone();
-    animals.push_back(new_animal);
+void Zoo::put(Animal *_animal) {
+    if (animals.size() > max) {
+        std::cout << "Free cells are over" << std::endl;
+    }
+    animals.push_back(_animal);
 }
 
 Animal *Zoo::operator[](int index) {
     return animals[index];
 }
 
-Zoo &Zoo::operator=(const Zoo &other) {
-    if (this == &other) {
-        return *this;
-    }
-    for (auto animal: animals) {
-        delete animal;
-    }
-    animals.clear();
-    for (auto animal: other.animals) {
-        animals.push_back(animal);
-    }
-    return *this;
-}
 
 Zoo::Zoo(const Zoo &other) {
     for (auto animal: other.animals) {
         animals.push_back(animal);
     }
+    this->max = other.max;
 }
 
-Zoo &Zoo::operator<<(const Animal &animal) {
-    put(animal);
-    return *this;
+Zoo::Zoo(Zoo &&other) {
+    for(auto iter: animals){
+        this->animals.push_back(iter);
+        iter = nullptr;
+    }
+    this->title = other.title;
+    this->max = other.max;
 }
 
-bool Zoo::operator==(Zoo &other) {
+
+bool Zoo::operator==(const Zoo &other) {
     if (animals.size() != other.animals.size()) {
         return false;
     }
@@ -72,18 +67,50 @@ bool Zoo::operator==(Zoo &other) {
     return true;
 }
 
+void Zoo::operator()() const {
+    std::cout << "Information about Zoo store:" << "\n";
+    std::cout << "Title: " << this->title << ", Size: "
+              << this->animals.size() << "\n";
+    std::cout << "Contained Animals:" << "\n";
+    for (auto iter: this->animals) {
+        std::cout << *iter << std::endl;
+    }
+    std::cout << max - this->animals.size() << std::endl;
+}
+
+Zoo::Zoo() {
+    title = "None";
+    max = 20;
+}
+
+void Zoo::operator<<(Animal *_animal) {
+    if (animals.size() > max) {
+        std::cout << "Free cells are over" << std::endl;
+        return;
+    }
+    animals.push_back(_animal);
+}
+
+
+
+
+
+
+/*
 std::ostream &operator<<(std::ostream &os, const Zoo &zoo) {
     os << "Information about Zoo store:" << "\n";
-    os << "Name: " << zoo.title << ", Size: "
+    os << "Title: " << zoo.title << ", Size: "
        << zoo.animals.size() << "\n";
     os << "Contained Animals:" << "\n";
     for (Animal *iter: zoo.animals) {
         os << *iter << "\n";
     }
     return os;
-}
+}*/
 
-Zoo::Zoo() {
-    title = "None";
-}
-
+/*Zoo::~Zoo() {
+    for (auto animal: animals) {
+        delete animal;
+    }
+    animals.clear();
+}*/
