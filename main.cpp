@@ -11,18 +11,20 @@ int main() {
 
 
 
-    zoo1 << &rab1;
-    zoo1 << &cat1;
-    zoo1 << &dog1;
-
-    Zoo zoo2(zoo1);
-
-    Animal *getted = zoo2.get();
-
-    zoo2();
-
+    zoo1 << &rab1 << &cat1 << &dog1;
+    /*zoo1 << &cat1;
+    zoo1 << &dog1;*/
 
     zoo1();
+
+    /*Zoo zoo2 = std::move(zoo1);
+
+    Dog dog2 = Dog("Boobby", 1, "Russel Terrier");
+    zoo2 << &dog2;
+
+    zoo1();
+    zoo2();*/
+
     return 0;
 
 }

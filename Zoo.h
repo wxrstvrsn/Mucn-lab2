@@ -27,11 +27,25 @@ public:
     /** Getting animal by index **/
     Animal *operator[](int index);
 
-    /** C-tor **/
-    Zoo(const Zoo &other);
+    /** copy C-tor **/
+    Zoo(const Zoo &other) = delete;
+
+    /** Move constructor **/
+    Zoo(Zoo &&other);
+
+    /** Move operator **/
+    Zoo &operator=(Zoo &&other);
 
     /** Overload insertion operator for adding Animal to Zoo */
-    void operator<<(Animal *_animal);
+    //void operator<<(Animal *_animal);
+
+
+    //CHECKFIXED
+    Zoo &operator<<(Animal *animal);
+
+
+    /** Restrict copying **/
+    Zoo &operator=(const Zoo &other) = delete;
 
     /** Equal operator for Zoo stores **/
     bool operator==(const Zoo &other);

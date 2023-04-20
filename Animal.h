@@ -21,6 +21,16 @@ public:
 
     virtual void Play() const = 0;
 
+    /*std::ostream& operator<<(std::ostream& os) const {
+        os << "Animal: " << name << "etc"";
+        return os;
+    }*/
+
+
+
+    //RETHINK
+    //SHTC
+    //TODO /** Есть вопросик **/
     friend std::ostream &operator<<(std::ostream &os, const Animal &animal);
 
     //FIXME
